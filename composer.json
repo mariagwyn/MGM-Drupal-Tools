@@ -10,5 +10,7 @@
     }
   ],
   "license": "GPL-2.0+",
-  "require": { }
+  "require": {
+      "composer/installers": "~1.0"
+  }
 }
