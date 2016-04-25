@@ -1,0 +1,14 @@
+}
+  "name": "drupal/mgm_tools",
+  "description": "MGM Custom blocks, displays and slideshow for D8 ",
+  "type": "drupal-module-custom",
+  "homepage": "https://github.com/mariagwyn/MGM-Drupal-Tools",
+  "authors": [
+    {
+      "name": "Maria Gwyn McDowell",
+      "homepage": "https://www.drupal.org/u/matio89"
+    }
+  ],
+  "license": "GPL-2.0+",
+  "require": { }
+}
