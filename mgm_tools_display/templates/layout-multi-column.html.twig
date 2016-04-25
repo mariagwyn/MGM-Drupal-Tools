@@ -1,0 +1,57 @@
+{#
+/**
+ * @file
+ * Template for layout_multi_column layout.
+ */
+#}
+<div class="layout-multi-column clearfix {{ settings.extra_classes }}">
+  {% if content.top %}
+    <div class="region-top {{ settings.top_classes }}">
+      {{ content.top }}
+    </div>
+  {% endif %}
+  {% if content.primary or content.primary_second or content.primary_third %}
+  <div class="row-primary {{ settings.row_classes }}">
+    {% if content.primary %}
+      <div class="region-primary {{ settings.primary_classes }}">
+        {{ content.primary }}
+      </div>
+    {% endif %}
+    {% if content.primary_second %}
+      <div class="region-primary-second {{ settings.primary_second_classes }}">
+        {{ content.primary_second }}
+      </div>
+    {% endif %}
+    {% if content.primary_third %}
+      <div class="region-primary-third {{ settings.primary_third_classes }}">
+        {{ content.primary_third }}
+      </div>
+    {% endif %}
+  </div>
+  {% endif %}
+  {% if content.middle %}
+  <div class="row-middle {{ settings.row_classes }}">
+    <div class="region-middle {{ settings.middle_classes }}">
+      {{ content.middle }}
+    </div>
+  </div>
+  {% endif %}
+  {% if content.bottom or content.bottom_second or content.bottom_third %}
+  <div class="row-bottom {{ settings.row_classes }}">
+  {% if content.bottom %}
+    <div class="region-bottom {{ settings.bottom_classes }}">
+      {{ content.bottom }}
+    </div>
+  {% endif %}
+  {% if content.bottom_second %}
+    <div class="region-bottom-second {{ settings.bottom_second_classes }}">
+      {{ content.bottom_second }}
+    </div>
+  {% endif %}
+  {% if content.bottom_third %}
+    <div class="region-bottom-third {{ settings.bottom_third_classes }}">
+      {{ content.bottom_third }}
+    </div>
+  {% endif %}
+  {% endif %}
+</div>

@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Contains mgm_tools_display.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function mgm_tools_display_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the mgm_tools_display module.
+    case 'help.page.mgm_tools_display':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Page Manager Display Variants for MGM Tools') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function mgm_tools_display_theme() {
+  $theme = [];
+
+  return $theme;
+}

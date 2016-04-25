@@ -1,0 +1,49 @@
+<?php
+
+/**
+ * @file
+ * Contains mgm_tools_blocks.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Render\Element;
+
+/**
+ * Implements hook_help().
+ */
+function mgm_tools_blocks_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the mgm_tools_hero module.
+    case 'help.page.mgm_tools_blocks':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provide a base set of Custom Block types for Demo Framework.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function mgm_tools_blocks_preprocess_block(&$variables) {
+  if (isset($variables['content']) && isset($variables['content']['#block_content'])) {
+    if ($variables['content']['#block_content']->bundle() == 'hero') {
+      $wrapper = array(
+        '#type' => 'container',
+        '#attributes' => array(
+          'class' => array('hero-block-fields')
+        ),
+        '#children' => array()
+      );
+      foreach (Element::getVisibleChildren($variables['content']) as $field_name) {
+        if ($field_name != 'field_hero_image' && $field_name != 'field_hero_link') {
+          $wrapper['#children'][] = $variables['content'][$field_name];
+          unset($variables['content'][$field_name]);
+        }
+      }
+      $variables['content']['wrapper'] = $wrapper;
+    }
+  }
+}

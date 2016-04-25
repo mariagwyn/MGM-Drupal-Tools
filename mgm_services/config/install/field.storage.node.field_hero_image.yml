@@ -1,0 +1,20 @@
+uuid: b0529d92-05d9-4d95-bc13-196c5d10634d
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - node
+id: node.field_hero_image
+field_name: field_hero_image
+entity_type: node
+type: entity_reference
+settings:
+  target_type: file
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

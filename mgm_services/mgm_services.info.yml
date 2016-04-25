@@ -1,0 +1,10 @@
+name: Service Content Type
+type: module
+description: 'Provides Service entity and related view.'
+package: MGM Tools
+core: 8.x
+# These modules are required by the tests, must be available at bootstrap time
+dependencies:
+  - node
+  - path
+  - text

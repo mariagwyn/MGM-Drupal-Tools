@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Contains mgm_tools.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function mgm_tools_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the mgm_tools module.
+    case 'help.page.mgm_tools':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Wrapper for enabling MGM tools.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function mgm_tools_theme() {
+  $theme = [];
+
+  return $theme;
+}

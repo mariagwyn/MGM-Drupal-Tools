@@ -1,0 +1,26 @@
+uuid: 3d34fef3-737a-4a61-bd45-698c7ec06122
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero
+    - field.storage.node.field_hero_block
+    - node.type.service_page
+id: node.service_page.field_hero_block
+field_name: field_hero_block
+entity_type: node
+bundle: service_page
+label: 'Hero Block'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      hero: hero
+    sort:
+      field: _none
+field_type: entity_reference

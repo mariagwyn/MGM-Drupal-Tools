@@ -1,0 +1,22 @@
+uuid: 318cf488-a576-40bd-9900-d57b07e83950
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.service_page
+  module:
+    - text
+id: node.service_page.body
+field_name: body
+entity_type: node
+bundle: service_page
+label: Body
+description: 'This field contains the full descriptive text of the service. Be sure to ''edit summary'' and add a one-line summary which will be displayed on teaser lists and summary blocks.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

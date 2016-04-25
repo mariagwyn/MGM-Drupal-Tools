@@ -1,0 +1,14 @@
+uuid: ed2c440a-a229-4c10-9e28-40f2cc50f713
+langcode: en
+status: true
+dependencies: {  }
+name: hero_image_narrow
+label: 'Hero Image Narrow'
+effects:
+  759786a2-e01e-4f67-b700-fec7e8330e73:
+    uuid: 759786a2-e01e-4f67-b700-fec7e8330e73
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1650
+      height: 275

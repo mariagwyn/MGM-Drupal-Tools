@@ -1,0 +1,5 @@
+name: MGM Tools Slideshow
+type: module
+description: Provides a Slideshow block type.
+core: 8.x
+package: MGM Tools

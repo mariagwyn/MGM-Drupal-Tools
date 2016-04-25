@@ -1,0 +1,24 @@
+uuid: 76a525ee-a4bd-423d-9561-977f4217e658
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero_image
+    - node.type.service_page
+id: node.service_page.field_hero_image
+field_name: field_hero_image
+entity_type: node
+bundle: service_page
+label: 'Hero Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+field_type: entity_reference

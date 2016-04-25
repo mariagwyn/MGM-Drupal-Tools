@@ -1,0 +1,21 @@
+uuid: 23972913-4f95-4b65-8d03-3c0440a4392c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subtitle
+    - node.type.service_page
+  module:
+    - text
+id: node.service_page.field_subtitle
+field_name: field_subtitle
+entity_type: node
+bundle: service_page
+label: Subtitle
+description: 'Use this for a subtitle or catchphrase.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

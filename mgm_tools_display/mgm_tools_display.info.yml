@@ -1,0 +1,8 @@
+name: MGM Tools Display
+type: module
+description: Page Manager Display Variants for MGM Sites
+core: 8.x
+package: MGM Tools
+dependencies:
+  - panels
+  - layout_plugin

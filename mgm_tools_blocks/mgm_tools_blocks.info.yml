@@ -1,0 +1,12 @@
+name: MGM Tools Blocks
+type: module
+description: Provide a base set of Custom Block types.
+core: 8.x
+package: MGM Tools
+dependencies:
+  - node
+  - image
+  - link
+  - inline_entity_form
+  - text
+  - user

@@ -1,0 +1,23 @@
+mgm_multi_column:
+  label: Multi Column Layout
+  category: MGM Displays
+  class: '\Drupal\mgm_tools_display\Plugin\Layout\MultiColumnDisplay'
+  template: templates/layout-multi-column
+  css: css/layout-multi-col.css
+  regions:
+    top:
+      label: Top region
+    primary:
+      label: Primary
+    primary_second:
+      label: Primary second
+    primary_third:
+      label: Primary third
+    middle:
+      label: Middle
+    bottom:
+      label: Bottom
+    bottom_second:
+      label: Bottom second
+    bottom_third:
+      label: Bottom third
