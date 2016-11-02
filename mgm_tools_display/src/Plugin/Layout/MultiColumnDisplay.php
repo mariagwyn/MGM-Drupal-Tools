@@ -1,23 +1,33 @@
 <?php
-/**
- * @file
- * Contains \Drupal\mgm_tools_display\Plugin\Layout\MultiColumnDisplay
- */
 
 namespace Drupal\mgm_tools_display\Plugin\Layout;
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\layout_plugin\Plugin\Layout\LayoutBase;
 
+/**
+ * The plugin that handles a MultiColumn Display layout template.
+ *
+ * @ingroup layout_template_plugins
+ *
+ * @Layout(
+ *   id = "multi_column_display",
+ *   label = @Translation("MultiColumn layout (with settings)"),
+ *   category = @Translation("Layout"),
+ *   description = @Translation("MultiColumn layout"),
+ *   type = "page",
+ *   help = @Translation("Layout"),
+ * )
+ */
 class MultiColumnDisplay extends LayoutBase {
 
   /**
    * {@inheritdoc}
    */
   public function defaultConfiguration() {
-    return parent::defaultConfiguration() + [
-    ];
+    return parent::defaultConfiguration() + [];
   }
+
   /**
    * {@inheritdoc}
    */
@@ -33,6 +43,7 @@ class MultiColumnDisplay extends LayoutBase {
 
     return $build;
   }
+
   /**
    * {@inheritdoc}
    */
@@ -46,10 +57,10 @@ class MultiColumnDisplay extends LayoutBase {
       '#default_value' => $configuration['extra_classes'],
     ];
     $form['row_classes'] = [
-        '#type' => 'textfield',
-        '#title' => $this->t('Row classes'),
-        '#description' => $this->t('Configure the wrapper class for each enclosing row. For example, the default is "row" in order to work with ZURB Foundation themes.'),
-        '#default_value' => $this->configuration['row_classes'] ?: 'row',
+      '#type' => 'textfield',
+      '#title' => $this->t('Row classes'),
+      '#description' => $this->t('Configure the wrapper class for each enclosing row. For example, the default is "row" in order to work with ZURB Foundation themes.'),
+      '#default_value' => $this->configuration['row_classes'] ?: 'row',
     ];
     $form['top_classes'] = [
       '#type' => 'textfield',
@@ -104,6 +115,7 @@ class MultiColumnDisplay extends LayoutBase {
 
   /**
    * @inheritDoc
+   * A description for an unkown reason
    */
   public function submitConfigurationForm(array &$form, FormStateInterface $form_state) {
     parent::submitConfigurationForm($form, $form_state);
@@ -119,5 +131,5 @@ class MultiColumnDisplay extends LayoutBase {
     $this->configuration['bottom_second_classes'] = $form_state->getValue('bottom_second_classes');
     $this->configuration['bottom_third_classes'] = $form_state->getValue('bottom_third_classes');
   }
+
 }
-?>

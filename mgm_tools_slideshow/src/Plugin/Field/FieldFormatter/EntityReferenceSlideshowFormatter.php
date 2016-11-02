@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Contains \Drupal\mgm_tools_slideshow\Plugin\Field\FieldFormatter\EntityReferenceSlideshowFormatter.
- */
-
 namespace Drupal\mgm_tools_slideshow\Plugin\Field\FieldFormatter;
 
 use Drupal\Core\Field\FieldItemListInterface;
@@ -47,8 +42,8 @@ class EntityReferenceSlideshowFormatter extends EntityReferenceEntityFormatter {
         'rtl' => FALSE,
         'fade' => FALSE,
         'pauseOnDotsHover' => FALSE,
-        'vertical' => FALSE
-      )
+        'vertical' => FALSE,
+      ),
     ) + parent::defaultSettings();
   }
 
@@ -75,7 +70,7 @@ class EntityReferenceSlideshowFormatter extends EntityReferenceEntityFormatter {
         '#type' => 'checkbox',
         '#title' => $setting,
         '#default_value' => $default_value,
-        '#return_value' => TRUE
+        '#return_value' => TRUE,
       );
     }
 
@@ -102,15 +97,15 @@ class EntityReferenceSlideshowFormatter extends EntityReferenceEntityFormatter {
       }
     }
 
-    // For some reason preprocess_block doesn't get called for entity references to blocks
+    // Preprocess_block doesn't get called for entity references to blocks.
     foreach (Element::getVisibleChildren($elements) as $i) {
-      if (isset ($elements[$i]['#block_content']) && $elements[$i]['#block_content']->bundle() == 'hero') {
+      if (isset($elements[$i]['#block_content']) && $elements[$i]['#block_content']->bundle() == 'hero') {
         $wrapper = array(
           '#type' => 'container',
           '#attributes' => array(
-            'class' => array('hero-block-fields')
+            'class' => array('hero-block-fields'),
           ),
-          '#children' => array()
+          '#children' => array(),
         );
         foreach (Element::getVisibleChildren($elements[$i]) as $field_name) {
           if ($field_name != 'field_image') {
@@ -126,7 +121,7 @@ class EntityReferenceSlideshowFormatter extends EntityReferenceEntityFormatter {
 
     $elements['#attributes']['class'][] = 'mgm-tools-slideshow';
 
-    // Fix slick boolean values so that they're passed to javascript correctly
+    // Fix slick boolean values so that they're passed to javascript correctly.
     $slick = array();
     foreach ($this->getSetting('slick') as $setting => $value) {
       $slick[$setting] = $value == 0 ? FALSE : TRUE;
