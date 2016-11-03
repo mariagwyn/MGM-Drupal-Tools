@@ -114,8 +114,7 @@ class MultiColumnDisplay extends LayoutBase {
   }
 
   /**
-   * @inheritDoc
-   * A description for an unkown reason
+   * {@inheritdoc}
    */
   public function submitConfigurationForm(array &$form, FormStateInterface $form_state) {
     parent::submitConfigurationForm($form, $form_state);

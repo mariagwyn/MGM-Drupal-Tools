@@ -33,9 +33,9 @@ function mgm_tools_blocks_preprocess_block(&$variables) {
       $wrapper = array(
         '#type' => 'container',
         '#attributes' => array(
-          'class' => array('hero-block-fields')
+          'class' => array('hero-block-fields'),
         ),
-        '#children' => array()
+        '#children' => array(),
       );
       foreach (Element::getVisibleChildren($variables['content']) as $field_name) {
         if ($field_name != 'field_hero_image' && $field_name != 'field_hero_link') {
