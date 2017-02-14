@@ -1,7 +1,7 @@
 {
   "name": "mariagwyn/mgm_tools",
   "description": "MGM Custom blocks, displays and slideshow for D8 ",
-  "type": "drupal-module-custom",
+  "type": "drupal-custom-module",
   "homepage": "https://github.com/mariagwyn/MGM-Drupal-Tools",
   "require": {
       "composer/installers": "~1.0"
